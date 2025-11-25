@@ -66,9 +66,6 @@ export const Contact: React.FC = () => {
               <li>
                 <button onClick={() => scrollToSection('destinations')} className="text-slate-400 hover:text-secondary transition-colors text-left">Destinations</button>
               </li>
-              <li>
-                <a href="#" className="text-slate-400 hover:text-secondary transition-colors">Privacy Policy</a>
-              </li>
             </ul>
           </div>
         </div>
