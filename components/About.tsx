@@ -1,5 +1,4 @@
-import React from 'react';
-import { Phone, MapPin, CheckCircle } from 'lucide-react';
+import { Phone, MapPin, CheckCircle } from 'lucide-react'
 
 export const About: React.FC = () => {
   return (

@@ -1,7 +1,7 @@
-import React from 'react';
-import { MapPin, Mail, Facebook, Twitter, Instagram } from 'lucide-react';
+'use client'
 
-const LOGO_URL = "travukwik-logo.jpg";
+import Image from 'next/image'
+import { MapPin, Mail, Facebook, Twitter, Instagram } from 'lucide-react'
 
 export const Contact: React.FC = () => {
   const scrollToSection = (id: string) => {
@@ -18,8 +18,16 @@ export const Contact: React.FC = () => {
           {/* Brand Info */}
           <div>
             <div className="flex items-center gap-2 mb-6">
-               <img src={LOGO_URL} alt="Travukwik Logo" className="h-10 w-auto" onError={(e) => {e.currentTarget.style.display='none'; e.currentTarget.nextElementSibling?.classList.remove('hidden')}} />
-               <span className="text-2xl font-bold">travukwik</span>
+               <span className="text-2xl font-bold">Travukwik</span>
+               <div className="relative h-10 w-10 rounded-full bg-white flex items-center justify-center">
+                 <Image
+                   src="/travukwik-logo4.png"
+                   alt="Travukwik Logo"
+                   fill
+                   sizes="40px"
+                   className="object-contain"
+                 />
+               </div>
             </div>
             <p className="text-slate-400 mb-6 leading-relaxed">
               Making your travel dreams a reality. Quick, reliable, and tailored just for you.

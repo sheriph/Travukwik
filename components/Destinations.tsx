@@ -1,5 +1,5 @@
-import React from 'react';
-import { Star, MapPin } from 'lucide-react';
+import Image from 'next/image'
+import { Star, MapPin } from 'lucide-react'
 import { Destination } from '../types';
 
 const destinations: Destination[] = [
@@ -9,7 +9,7 @@ const destinations: Destination[] = [
     country: 'Greece',
     price: '$1,200',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=800&auto=format&fit=crop',
+    image: '/santorini.jpg',
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const destinations: Destination[] = [
     country: 'UAE',
     price: '$950',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1512453979798-5ea936a7fe11?q=80&w=800&auto=format&fit=crop',
+    image: '/dubai.jpg',
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const destinations: Destination[] = [
     country: 'Indonesia',
     price: '$1,100',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=800&auto=format&fit=crop',
+    image: '/bali.jpg',
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const destinations: Destination[] = [
     country: 'France',
     price: '$1,500',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop',
+    image: '/paris.jpg',
   },
   {
     id: 5,
@@ -41,7 +41,7 @@ const destinations: Destination[] = [
     country: 'Maldives',
     price: '$1,800',
     rating: 5.0,
-    image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?q=80&w=800&auto=format&fit=crop',
+    image: '/maldives.jpg',
   },
   {
     id: 6,
@@ -49,7 +49,7 @@ const destinations: Destination[] = [
     country: 'UK',
     price: '$1,300',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=800&auto=format&fit=crop',
+    image: '/london.jpg',
   },
   {
     id: 7,
@@ -57,7 +57,7 @@ const destinations: Destination[] = [
     country: 'USA',
     price: '$1,600',
     rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1496442226666-8d4a0e62e6e9?q=80&w=800&auto=format&fit=crop',
+    image: '/new-york.jpg',
   },
   {
     id: 8,
@@ -65,7 +65,7 @@ const destinations: Destination[] = [
     country: 'Tanzania',
     price: '$900',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1586861635167-e5223aeb4227?q=80&w=800&auto=format&fit=crop',
+    image: '/zanzibar.jpg',
   }
 ];
 
@@ -83,11 +83,13 @@ export const Destinations: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {destinations.map((dest) => (
             <div key={dest.id} className="group rounded-2xl overflow-hidden shadow-lg cursor-pointer relative">
-              <div className="h-80 overflow-hidden">
-                <img 
+              <div className="h-80 overflow-hidden relative">
+                <Image 
                   src={dest.image} 
                   alt={dest.name} 
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90"></div>

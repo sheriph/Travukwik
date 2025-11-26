@@ -1,5 +1,4 @@
-import React from 'react';
-import { Plane, Hotel, Map, FileCheck, Globe, Briefcase } from 'lucide-react';
+import { Plane, Hotel, Map, FileCheck, Globe, Briefcase } from 'lucide-react'
 import { ServiceItem } from '../types';
 
 const services: ServiceItem[] = [

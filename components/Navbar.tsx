@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Mail } from 'lucide-react';
+'use client'
 
-const LOGO_URL = "travukwik-logo.jpg";
+import { useState, useEffect } from 'react'
+import Image from 'next/image'
+import { Menu, X, Mail } from 'lucide-react'
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,10 +32,18 @@ export const Navbar: React.FC = () => {
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <img src={LOGO_URL} alt="Travukwik Logo" className="h-12 w-auto" onError={(e) => {e.currentTarget.style.display='none'; e.currentTarget.nextElementSibling?.classList.remove('hidden')}} />
           <span className={`text-2xl font-bold ${isScrolled ? 'text-slate-900' : 'text-white drop-shadow-md'}`}>
-            travukwik
+            Travukwik
           </span>
+          <div className="relative h-12 w-12 rounded-full bg-white/90 flex items-center justify-center shadow-sm">
+            <Image
+              src="/travukwik-logo4.png"
+              alt="Travukwik Logo"
+              fill
+              sizes="48px"
+              className="object-contain"
+            />
+          </div>
         </div>
 
         {/* Desktop Menu */}

@@ -1,0 +1,22 @@
+{
+  "name": "Travukwik - Travel Quick, Travel Smart",
+  "short_name": "Travukwik",
+  "description": "Experience seamless travel planning with Travukwik. From Lagos to the world, we handle your flights, visas, and holidays.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#00aadd",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "orientation": "portrait"
+}

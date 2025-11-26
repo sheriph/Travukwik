@@ -1,5 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Send, Sparkles, Bot, User, Loader2 } from 'lucide-react';
+'use client'
+
+import { useState, useRef, useEffect } from 'react'
+import { Send, Sparkles, Bot, User, Loader2 } from 'lucide-react'
 import { ChatMessage } from '../types';
 import { generateTravelResponse } from '../services/geminiService';
 import ReactMarkdown from 'react-markdown';

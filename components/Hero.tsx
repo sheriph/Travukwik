@@ -1,16 +1,20 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
+'use client'
+
+import Image from 'next/image'
+import { ArrowRight } from 'lucide-react'
 
 export const Hero: React.FC = () => {
   return (
     <div className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2074&auto=format&fit=crop")',
-        }}
-      >
+      <div className="absolute inset-0 w-full h-full">
+        <Image 
+          src="/hero-bg.jpg"
+          alt="Travel background"
+          fill
+          priority
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/70 via-slate-900/50 to-slate-900/80"></div>
       </div>
 
