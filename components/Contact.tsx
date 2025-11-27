@@ -34,7 +34,7 @@ export const Contact: React.FC = () => {
               Experience the world with Travukwik.
             </p>
             <div className="flex gap-4">
-              <a href="https://www.facebook.com/travukwik" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#1877F2] transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61584359608162" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#1877F2] transition-colors">
                 <Facebook size={18} />
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-secondary transition-colors">
